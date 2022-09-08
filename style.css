@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    flex-direction:column;
+    overflow:hidden;
+    background:linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-family:'Kumbh Sans';
+    height:100vh;
+    font-size:13px;
+
+}
+
+
+/* Image optimization for mobile */
+img {
+    width:100%;
+}
+
+h1{
+    text-align:center; 
+}
+
+.mobile {
+    width:30%;
+}
+
+.pc, .box {
+    display:none;
+}
+
+
+.woman-mobile {
+    width:70%;
+    overflow:visible;
+    position:relative;
+    bottom:7.5em;
+}
+
+
+.arrow {
+    width:11px;
+    height:8px;
+    position:relative;
+    top:16px;
+    transition: 0.5s ease all;
+}
+
+
+
+.image-area  {
+    margin-bottom:-7em;
+    background-image:url(./images/bg-pattern-mobile.svg);
+    background-repeat:no-repeat;
+    background-size:70%;
+    background-position:55px 1em;
+}
+
+/*------------------------------*/
+
+main {
+    background-color:white;
+    border-radius:30px;
+    width:375px;
+    overflow:visible;
+}
+
+.faq-section {
+    text-align:left;
+    padding:20px 28px;
+    margin-bottom:2em;
+}
+
+.faq-container {
+    padding:2px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.432);
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:3px;
+    cursor:pointer;
+    transition: 0.3s ease all;
+}
+
+.question p:hover {
+    color:hsl(14, 88%, 65%);
+}
+
+.answer {
+    font-size:14px;
+    padding-right:35px;
+    margin-top:-0.4em;
+    transition: 0.3s ease-in-out all;
+    position:absolute;
+    top:100%;
+    transition: 0.2s ease-in;
+    opacity:0;
+}
+
+
+footer {
+    position:absolute;
+    bottom:10px;
+}
+
+.shadow-mobile {
+    position:absolute;
+}
+
+.show {
+    display:block;
+}
+
+.attribution { 
+      font-size: 11px; 
+      text-align: center;
+      color:rgb(212, 212, 212);
+      }
+    .attribution a { 
+        color: hsl(0, 0%, 100%); 
+    }
+
+
+
+@media (min-width:65em){
+
+    .pc {
+        display:block;
+    }
+
+    .mobile {
+        display:none;
+    }
+
+    .box {
+        display:block;
+        position:absolute;
+        z-index:100;
+    }
+
+    .box-desktop {
+        width:85%;
+        position:relative;
+        top:12.9em;
+        right:5.9em;
+
+    }
+
+    .woman-desktop {
+        width:100%;
+        position:relative;
+        top:5em;
+        right:4em;
+    }
+
+    main{
+        width:61em;
+        height:33.5em;
+        display:flex;
+        justify-content: space-between;
+    }
+
+    .faq-section {
+        width:450px;
+        padding-right:3em;
+        margin:-0.5em 2em;
+    }
+
+    h1 {
+        text-align:left;
+    }
+
+
+    .image-area  {
+        background-image:url(./images/bg-pattern-desktop.svg);
+        background-repeat:no-repeat;
+        background-size:45em;
+        background-position:-19em -8em;
+        overflow:hidden;
+    }
+}
+
+
+.active p {
+    color:rgb(109, 106, 106);
+    display:block;
+    position:relative;
+    opacity:1;
+    bottom:0px;
+}
+
+.active .question-p {
+    font-weight:700;
+    color:black;
+}
+
+/*To keep hover effect for header questions specifically for non active classes*/
+.active .question-p:hover {
+    color:black;
+}
+
+.active .arrow {
+    transform:rotate(180deg);
+}
